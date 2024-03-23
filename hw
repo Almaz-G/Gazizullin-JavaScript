@@ -1,0 +1,45 @@
+public class CalculatorService {
+    public String max(int a, int b) {
+        String answer;
+        if (a > b) {
+            answer = "a > b";
+        } else if (a == b) {
+            answer = "a = b";
+
+        } else {
+            answer = "a <b";
+        }
+        return answer;
+    }
+
+public class StringsService {
+    public String compare(String a, String b) {
+        String result;
+        if (a.equals(b)) {
+            result = "Строки идентичны";
+        } else {
+            result = "Строки неидентичны";
+        }
+        return result;
+    }
+}
+
+public class ArrayService {
+    public int[] getEvenNumbers(int[] numbers) {
+        int length = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            length++;
+        }
+
+        int[] tmp = new int[length];
+        int copyToIndex = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                tmp[copyToIndex] = numbers[i];
+                copyToIndex++;
+            }
+        }
+        numbers = tmp;
+        return numbers;
+    }
+}
